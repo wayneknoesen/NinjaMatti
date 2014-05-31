@@ -29,7 +29,7 @@ static const uint32_t monsterCategory = 0x1 << 1;
 
         NSLog(@"Size: %@", NSStringFromCGSize(size));
         
-        self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        self.backgroundColor = [SKColor colorWithRed:85/255.0f green:102/255.0f blue:236/255.0f alpha:1.0f];
         
         self.player = [SKSpriteNode spriteNodeWithImageNamed:@"player"];
         self.player.position = CGPointMake(self.player.size.width/2, self.frame.size.height/2);
