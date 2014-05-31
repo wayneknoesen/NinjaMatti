@@ -8,25 +8,63 @@
 
 #import "LAViewController.h"
 #import "LAMyScene.h"
+@import AVFoundation;
+
+@interface LAViewController ()
+@property (nonatomic) AVAudioPlayer *backgroundMusicPlayer;
+@end
 
 @implementation LAViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//
+//    // Configure the view.
+//    SKView * skView = (SKView *)self.view;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
+//    
+//    // Create and configure the scene.
+//    SKScene * scene = [LAMyScene sceneWithSize:skView.bounds.size];
+//    scene.scaleMode = SKSceneScaleModeAspectFill;
+//    
+//    // Present the scene.
+//    [skView presentScene:scene];
+//}
 
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+-(void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
     
-    // Create and configure the scene.
-    SKScene * scene = [LAMyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    NSError *error;
+    NSURL *backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"background-music-aac" withExtension:@"caf"];
+    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
+    self.backgroundMusicPlayer.numberOfLoops = -1;
+    [self.backgroundMusicPlayer prepareToPlay];
+    [self.backgroundMusicPlayer play];
     
-    // Present the scene.
-    [skView presentScene:scene];
+    
+    //Configure the view
+    SKView *skView = (SKView *)self.view;
+    if (!skView.scene) {
+        skView.showsFPS = YES;
+        skView.showsNodeCount = YES;
+        
+    //Create and Configure the scene
+        SKScene *scene = [LAMyScene sceneWithSize:skView.bounds.size];
+        scene.scaleMode = SKSceneScaleModeAspectFill;
+    
+    //Present the view
+        [skView presentScene:scene];
+        
+    }
+    
+    
 }
+
+
+
+
 
 - (BOOL)shouldAutorotate
 {

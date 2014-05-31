@@ -24,6 +24,9 @@
 		475954B21939069A00BCA20A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4759548D1939069A00BCA20A /* UIKit.framework */; };
 		475954BA1939069A00BCA20A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 475954B81939069A00BCA20A /* InfoPlist.strings */; };
 		475954BC1939069A00BCA20A /* Leet_GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 475954BB1939069A00BCA20A /* Leet_GameTests.m */; };
+		475954C9193907FC00BCA20A /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 475954C6193907FC00BCA20A /* background-music-aac.caf */; };
+		475954CA193907FC00BCA20A /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 475954C7193907FC00BCA20A /* pew-pew-lei.caf */; };
+		475954DD1939D75700BCA20A /* LAGameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 475954DC1939D75600BCA20A /* LAGameOver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,10 @@
 		475954B71939069A00BCA20A /* Leet GameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Leet GameTests-Info.plist"; sourceTree = "<group>"; };
 		475954B91939069A00BCA20A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		475954BB1939069A00BCA20A /* Leet_GameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Leet_GameTests.m; sourceTree = "<group>"; };
+		475954C6193907FC00BCA20A /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		475954C7193907FC00BCA20A /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		475954DB1939D75600BCA20A /* LAGameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAGameOver.h; path = ../LAGameOver.h; sourceTree = "<group>"; };
+		475954DC1939D75600BCA20A /* LAGameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAGameOver.m; path = ../LAGameOver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +128,7 @@
 		475954911939069A00BCA20A /* Leet Game */ = {
 			isa = PBXGroup;
 			children = (
+				475954C5193907FC00BCA20A /* Sounds */,
 				4759549A1939069A00BCA20A /* LAAppDelegate.h */,
 				4759549B1939069A00BCA20A /* LAAppDelegate.m */,
 				4759549D1939069A00BCA20A /* Main.storyboard */,
@@ -130,6 +138,8 @@
 				475954A41939069A00BCA20A /* LAMyScene.m */,
 				475954A61939069A00BCA20A /* Spaceship.png */,
 				475954A81939069A00BCA20A /* Images.xcassets */,
+				475954DB1939D75600BCA20A /* LAGameOver.h */,
+				475954DC1939D75600BCA20A /* LAGameOver.m */,
 				475954921939069A00BCA20A /* Supporting Files */,
 			);
 			path = "Leet Game";
@@ -162,6 +172,15 @@
 				475954B81939069A00BCA20A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		475954C5193907FC00BCA20A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				475954C6193907FC00BCA20A /* background-music-aac.caf */,
+				475954C7193907FC00BCA20A /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +260,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475954C9193907FC00BCA20A /* background-music-aac.caf in Resources */,
 				475954961939069A00BCA20A /* InfoPlist.strings in Resources */,
 				475954A91939069A00BCA20A /* Images.xcassets in Resources */,
 				475954A71939069A00BCA20A /* Spaceship.png in Resources */,
 				4759549F1939069A00BCA20A /* Main.storyboard in Resources */,
+				475954CA193907FC00BCA20A /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475954DD1939D75700BCA20A /* LAGameOver.m in Sources */,
 				475954981939069A00BCA20A /* main.m in Sources */,
 				4759549C1939069A00BCA20A /* LAAppDelegate.m in Sources */,
 				475954A21939069A00BCA20A /* LAViewController.m in Sources */,
